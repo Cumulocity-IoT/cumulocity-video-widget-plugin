@@ -1,0 +1,105 @@
+<div class="row">
+  <div class="col-lg-5">
+    <div class="form-group">
+      <label for="playlistFile">Upload playlist (optional)</label>
+      <input type="file" class="form-control" name="playlistFile" accept=".m3u" (change)="uploadPlaylist($event.target.files)" />
+    </div>
+  </div>
+  <div class="col-lg-7" style="margin-top: 30px;">
+    {{playlistUploadMsg}}
+  </div>
+</div>
+
+<div class="row" *ngFor="let source of config.customWidgetData.sources; let i = index;">
+  <div class="col-lg-2">
+    <div class="form-group">
+      <label for="sourceList">Source type <i class="dlt-c8y-icon-help" title="Streaming - for HLS streams.&#013;On demand - for playing links to MP4, MKV, Apple Quicktime videos.&#013;Embedded - for embedded players such as YouTube, Vimeo, etc."></i>
+      </label>
+      <select [(ngModel)]="source.type" required name="sourceList" >
+        <option value="stream">Streaming</option>
+        <option value="ondemand">On demand</option>
+        <option value="embed">Embedded</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-lg-2">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" [(ngModel)]="source.title" required />
+    </div>
+  </div>
+  <div class="col-lg-7">
+    <div class="form-group">
+      <label>URL</label>
+      <input type="text" class="form-control" [(ngModel)]="source.url" required />
+    </div>
+  </div>
+  <ng-container *ngIf="i !== 0">
+    <div class="col-lg-1">
+      <button class="btn btn-default" style="margin-top: 24px;" (click)="removeSource(i)" title="Remove source"><i class="c8y-icon c8y-icon-waste-bin"></i></button>
+    </div>
+  </ng-container>
+  
+</div>
+
+<div class="row">
+  <div class="col-lg-2">
+    <div class="form-group">
+      <button class="btn btn-default" (click)="addSource()" title="Add source">Add source</button>
+    </div>
+  </div>
+  
+</div>
+
+<div class="row">
+  <div class="col-lg-3">
+    <div class="form-group">
+      <label>Playlist & buttons position</label>
+      <select class="form-control" [(ngModel)]="config.customWidgetData.playlist.position">
+        <option value="top">Top</option>
+        <option value="bottom">Bottom</option>
+        <option value="hide">Hide</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-lg-2" style="margin-top: 24px;">
+    <div class="form-group">
+      <label class="c8y-checkbox">
+        <input type="checkbox" [(ngModel)]="config.customWidgetData.player.autoplay" />
+        <span></span>
+        <span>Autoplay</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-3">
+    <div class="form-group">
+      <label>Default source</label>
+      <select class="form-control" [ngModel]="defaultSource" (ngModelChange)="changeDefaultSource($event)">
+        <option *ngFor="let source of this.config.customWidgetData.sources" [ngValue]="source">{{source.title}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-lg-2" style="margin-top: 24px;">
+    <div class="form-group">
+      <label class="c8y-checkbox">
+        <input type="checkbox" [(ngModel)]="config.customWidgetData.player.loop" [disabled]="defaultSource.type !== 'ondemand'" />
+        <span></span>
+        <span>Loop</span>
+      </label>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="form-group">
+      <!-- Measurement -->
+      <label for="measurement" translate>
+        Measurement
+      </label>
+      <select class="form-control" name="measurement" [disabled]="measurementSeriesDisabled || defaultSource.type !== 'ondemand'" [(ngModel)]="this.config.customWidgetData.measurement" (focus)="loadFragmentSeries()">
+        <option [ngValue]="seriesValue" *ngFor="let seriesValue of supportedSeries">{{seriesValue}}</option>
+      </select>
+    </div>
+  </div>
+</div>
