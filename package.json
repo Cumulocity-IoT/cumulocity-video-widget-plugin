@@ -1,17 +1,21 @@
 {
   "name": "cumulocity-video-widget-plugin",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "The Video Widget help you to Plays streaming videos from sources such as HLS streams, on-demand videos (such as MP4, MKV, MOV) from URL and embedded YouTube, Vimeo, etc. videos.",
   "scripts": {
     "start": "c8ycli server",
-    "build": "c8ycli build",
+    "build": "c8ycli build ",
     "deploy": "c8ycli deploy",
     "postinstall": "ngcc",
     "prebuild": " gulp clean",
     "postbuild": " gulp bundle"
   },
-  "keywords": [],
-  "author": "Darpankumar Lalani - Software AG, Global Presales",
+  "keywords": [
+    "Cumulocity",
+    "Plugin",
+    "Widget"
+  ],
+  "author": "Software AG, Global Presales",
   "license": "Apache 2.0",
   "dependencies": {
     "@angular/animations": "14.0.6",
@@ -52,10 +56,10 @@
   },
   "c8y": {
     "application": {
-      "name": "Cumulocity Video Widget Plugin",
+      "name": "Video Widget",
       "description": "The Video Widget help you to Plays streaming videos from sources such as HLS streams, on-demand videos (such as MP4, MKV, MOV) from URL and embedded YouTube, Vimeo, etc. videos.",
-      "contextPath": "cumulocity-video-widget",
-      "key": "cumulocity-video-widget-key",
+      "contextPath": "sag-ps-pkg-video-widget",
+      "key": "sag-ps-pkg-video-widget-key",
       "globalTitle": "The Video Widget help you to Plays streaming videos from sources such as HLS streams, on-demand videos (such as MP4, MKV, MOV) from URL and embedded YouTube, Vimeo, etc. videos.",
       "tabsHorizontal": true,
       "isPackage": true,
@@ -67,7 +71,7 @@
       },
       "exports": [
         {
-          "name": "Video Widget Plugin",
+          "name": "Video Widget ",
           "module": "CumulocityVideoWidgetModule",
           "path": "./widget/cumulocity-video-widget.module.ts",
           "description": "The Video Widget help you to Plays streaming videos from sources such as HLS streams, on-demand videos (such as MP4, MKV, MOV) from URL and embedded YouTube, Vimeo, etc. videos."
