@@ -1,4 +1,4 @@
-# Video Widget for Cumulocity [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-video-widget-plugin/releases/download/1.0.0-beta/cumulocity-video-widget-1.0.0-beta.zip)
+# Video Widget for Cumulocity [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-video-widget-plugin/releases/download/1.0.0/ sag-ps-pkg-video-widget-1.0.0.zip)
 
     
 This Video widget is the Cumulocity module federation plugin created using c8ycli. This plugin can be used in Application Builder or Cockpit.
@@ -6,13 +6,11 @@ The Video widget help you to Plays streaming videos from sources such as HLS str
 
 ![Preview](widget/assets/img-preview.png)
 
-### Please note that this plugin is in currently under BETA mode.
-
 ### Please choose Video Widget release based on Cumulocity/Application builder version:
 
 |APPLICATION BUILDER | CUMULOCITY | VIDEO WIDGET |
 |--------------------|------------|--------------|
-| 2.x.x(coming soon) | >= 1016.x.x| 1.x.x        | 
+| 2.x.x              | >= 1016.x.x| 1.x.x        | 
 
 
 ## QuickStart
