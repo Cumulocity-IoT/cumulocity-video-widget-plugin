@@ -81,7 +81,17 @@
         "widget-plugin": [
           "CumulocityVideoWidgetModule"
         ]
-      }
+      },
+      "copy": [
+        {
+          "from": "assets/img-preview.png",
+          "to": "assets/img-preview.png"
+        },
+        {
+          "from": "LICENSE",
+          "to": "LICENSE.txt"
+        }
+      ]
     },
     "cli": {}
   },

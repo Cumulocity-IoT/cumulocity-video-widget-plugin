@@ -4,7 +4,7 @@
 This Video widget is the Cumulocity module federation plugin created using c8ycli. This plugin can be used in Application Builder or Cockpit.
 The Video widget help you to Plays streaming videos from sources such as HLS streams, on-demand videos (such as MP4, MKV, MOV) from URL and embedded YouTube, Vimeo, etc. videos. In addition, on-demand videos can be synchronized with device measurements representing video timestamp in seconds. Please note that links must be HTTPS and have Cross-Origin access enabled.
 
-![Preview](widget/assets/img-preview.png)
+![Preview](assets/img-preview.png)
 
 ### Please choose Video Widget release based on Cumulocity/Application builder version:
 
