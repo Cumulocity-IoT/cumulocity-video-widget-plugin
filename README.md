@@ -1,4 +1,9 @@
-# Video Widget for Cumulocity [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-video-widget-plugin/releases/download/1.0.1/sag-ps-pkg-video-widget-1.0.1.zip)
+# Deprecation notice
+
+This plugin is not further developed and it might break with upcoming Cumulocity releases. Use it at your own risk.
+The repository is archived but feel free to fork & adapt it to your needs in a new repo.
+
+# Video Widget for Cumulocity [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/Cumulocity-IoT/cumulocity-video-widget-plugin/releases/download/1.0.2/sag-ps-pkg-video-widget-1.0.2.zip)
 
     
 This Video widget is the Cumulocity module federation plugin created using c8ycli. This plugin can be used in Application Builder or Cockpit.
@@ -53,12 +58,11 @@ Congratulations! Video Widget is configured.
 
 ------------------------------
 
-This widget is provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
+This widget is provided as-is and without warranty or support. They do not constitute part of the Cumulocity product suite. Users are free to use, fork and modify them, subject to the license agreement. While Cumulocity GmbH welcomes contributions, we cannot guarantee to include every contribution in the master project.
 
 _____________________
 
-For more information you can Ask a Question in the [TECHcommunity Forums](https://tech.forums.softwareag.com/tags/c/forum/1/Cumulocity-IoT).
+For more information you can ask a Question in the [Tech community Forums](https://techcommunity.cumulocity.com).
 
   
 
-You can find additional information in the [Software AG TECHcommunity](https://tech.forums.softwareag.com/tag/Cumulocity-IoT).
